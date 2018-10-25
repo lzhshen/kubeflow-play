@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -x
 
 ##############################################
 ##########  Setting up a Cluster  ############
@@ -33,10 +33,10 @@ $KS_BIN env add cloud
 ##############################################
 ##########  Adding Kubeflow Packages     #####
 ##############################################
-$KS_BIN registry add kubeflow github.com/kubeflow/kubeflow/tree/${KS_VER}/kubeflow
-$KS_BIN pkg install kubeflow/core@${KS_VER}
-$KS_BIN pkg install kubeflow/tf-serving@${KS_VER}
-$KS_BIN pkg install kubeflow/tf-job@${KS_VER}
+$KS_BIN registry add kubeflow github.com/kubeflow/kubeflow/tree/${KF_VER}/kubeflow
+$KS_BIN pkg install kubeflow/core@${KF_VER}
+$KS_BIN pkg install kubeflow/tf-serving@${KF_VER}
+$KS_BIN pkg install kubeflow/tf-job@${KF_VER}
 
 # Generate the kubeflow-core component from its prototype
 $KS_BIN generate core kubeflow-core --name=kubeflow-core --cloud=gke
