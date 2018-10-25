@@ -12,7 +12,8 @@ gcloud container clusters create $K8S_CLUSTER --zone $ZONE --machine-type n1-sta
 gcloud container clusters get-credentials $K8S_CLUSTER --zone $ZONE
 
 # Change the permissions on the cluster to allow kubeflow to run properly:
-kubectl create clusterrolebinding default-admin --clusterrole=cluster-admin --user=$USER
+# kubectl create clusterrolebinding default-admin --clusterrole=cluster-admin --user=$USER
+kubectl create clusterrolebinding default-admin --clusterrole=cluster-admin --user=$(gcloud config get-value account)
 
 ##############################################
 ##########  Creating a ksonnet Project   #####
