@@ -6,6 +6,6 @@ export KUBEFLOW_REPO=$KUBEFLOW_REPO_BASE/kubeflow-repo
 export KUBEFLOW_TAG=v0.3.0
 export KFAPP=kfapp01
 export PROJECT=kubeflow-test-220404
-export ZONE=us-central1-a
+export ZONE=us-central1-c
 export KS_DIR=/home/shen/download/ks_0.13.0_linux_amd64
 export PATH=$KS_DIR:$PATH
