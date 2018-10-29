@@ -2,6 +2,7 @@
 ##########  Setting up a Storage Bucket ######
 ##############################################
 
+BUCKET_NAME=kubeflow-test-bucket
 # create the GCS bucket
 gsutil mb gs:# $BUCKET_NAME/
 
